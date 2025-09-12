@@ -1,7 +1,7 @@
 # Adatvédelmi Tájékoztató
 
 🇭🇺 Ez a dokumentáció magyarul van.  
-🇬🇧 English version: [README_en.md](README_en.md)
+🇬🇧 English version: [README_en.md](https://github.com/QwIT-Development/privacy-policy/blob/master/README_en.md)
 
 ## 0. Rövid összefoglalás
 - A Firka nem tárol semmilyen adatot szerveren - minden adat csak a te készülékeden marad.

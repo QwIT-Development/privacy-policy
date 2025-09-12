@@ -1,7 +1,7 @@
 # Privacy Policy
 
 🇬🇧 This documentation is in English.  
-🇭🇺 Magyar változat: [README.md](README.md)
+🇭🇺 Magyar változat: [README.md](https://github.com/QwIT-Development/privacy-policy/blob/master/README.md)
 
 ## 0. Summary
 - Firka does not store any data on servers - all data remains only on your device.
