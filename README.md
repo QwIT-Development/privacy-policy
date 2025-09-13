@@ -31,6 +31,14 @@ Az alkalmazás az alábbi, a KRÉTA rendszeréből érkező adatokat jeleníti m
 
 Ezek az adatok nem a Firka szerverein, hanem kizárólag a felhasználó készülékén, helyileg kerülnek tárolásra.
 
+Ahhoz, hogy híreket tudjunk közölni az alkalmazáson belül, a Firkának hozzá kell férnie egy, a saját szerverinken futó API-hoz (Application Programming Interface - magyarul "alkalmazásprogramozási felület"), melynek működése során a rendszer automatikusan naplózhatja a következő technikai adatokat:
+- a kliens eszköz által megadott "User-Agent", mely a Firka használata során tartalmazza az aktuális alkalmazásverziót,
+- a kérést indító eszköz IP-címe,
+- valamint az API kérés során egyéb, technikailag szükséges HTTP-fejlécek (pl. tartalomtípus, nyelvi beállítások).
+Ezeket az adatokat nem kapcsoljuk össze felhasználói fiókokkal vagy személyazonosító adatokkal, ezek kizárólag az API megfelelő működésének biztosítása, hibakeresés és visszélések megelőzése érdekében kerülhetnek ideiglenesen naplózásra.
+
+**Fontos:** az API-nak nem küld az alkalmazás a szükségesnél több adatot, és a küldött adatokat semmilyen esetben sem adjuk tovább harmadik félnek.
+
 ## 4. Adataid tárolásának helye és biztonsága
 - Az alkalmazás a KRÉTA szervereivel titkosított csatornán (HTTPS) kommunikál.
 - A lekért adatok csak a felhasználó telefonján/eszközén tárolódnak, harmadik félnek (kivéve a KRÉTA és a kapcsolódó szolgáltatók a hibabejelentések kapcsán) NEM kerülnek továbbításra marketing vagy tárolási célból.
@@ -45,9 +53,12 @@ Biztonsági intézkedések: alkalmazzuk a kommunikáció titkosítását, a mini
 
 3. **Szükséges technikai naplók kezelése (rendszeres működés biztosítása)** - cél: üzemeltetési/naplózási okok (hibakeresés rövid távon). **Jogalap:** jogos érdek (GDPR 6. cikk (1) f)), de csak minimális ideig és célhoz kötötten.
 
+4. **Firka által biztosított online hírközlések** - cél: az API működésének ellenőrzése, hibák felderítése, valamint az app fejlesztői által fontosnak vélt hírek közlése. **Jogalap:** jogos érdek (GDPR 6. cikk (1) f)).
+
 ## 6. Adatmegőrzési időtartam
 - **Lokálisan tárolt KRÉTA-adatok:** addig maradnak a készüléken, amíg az alkalmazást nem törli. A felhasználó maga önkényesen törölheti a lokálisan eltárolt adatokat.
 - **Hibajegyek / hibajelentések (Discord / TestFlight):** a hibajegyeket a problémamegoldás idejére tároljuk, majd a jegy lezárása után azonnal törlésre kerülnek. (A felhasználó külön kérésére a törlést hamarabb is végrehajtjuk.)
+- **Az API használata során közölt információk:** az IP-cím, valamint az API kérés fejlécei legfeljebb 90 napra kerülnek megőrzésre hibakeresési célból, majd automatikusan törlésre kerülnek. Indokolt esetben (pl. biztonsági incidens vizsgálatakor) ennél hosszabb megőrzés is lehetséges a jogszabályban előírt kötelezettségek teljesítése érdekében. Amennyiben nincs hiba vagy incidens, ezen naplókat nem tekintjük meg, és nem kerülnek feldolgozásra.
 
 ## 7. Adattovábbítás harmadik feleknek és nemzetközi adattovábbítás
 - **KRÉTA (Educational Development Zrt.)**: az alkalmazás a KRÉTA rendszereiből szerzi az adatokat - ők az eredeti adatkezelők.
@@ -66,7 +77,7 @@ Az érintett az alábbi jogokkal rendelkezik:
 
 A jogok gyakorlásához kérjük, írj a **legal@firka.app** címre. A kérelem beérkezését követően ésszerű időn belül, de legkésőbb 1 hónapon belül válaszolunk; összetett ügy vagy különleges esetben a válaszadási határidőt további 2 hónappal meghosszabbíthatjuk, erről értesítést küldünk.
 
-**Fontos**: a KRÉTA rendszerben tárolt adatok kezeléséért és megőrzéséért a KRÉTA (Educational Development Zrt.) felel. A Firka alkalmazás csak megjeleníti azokat az eszközön, és nem tartja meg saját szerverein. Ezért a KRÉTA-adatok módosításával vagy törlésével kapcsolatban az iskolád vagy a KRÉTA ügyfélszolgálata illetékes.
+**Fontos**: a KRÉTA rendszerben tárolt adatok kezeléséért és megőrzéséért minden esetben az a köznevelési intézmény felel, ahol a gyerek tanul. A Firka alkalmazás csak megjeleníti azokat az eszközön, és nem tartja meg saját szerverein. Ezért a KRÉTA-adatok módosításával vagy törlésével kapcsolatban az iskolád (és annak általában a rendszergazdája vagy igazgatója) illetékes.
 
 ## 9. Panasz és jogorvoslat (jogi halandzsa)
 Amennyiben az érintett úgy ítéli meg, hogy jogai sérültek, panasszal fordulhat a felügyeleti hatósághoz:

@@ -4,17 +4,17 @@
 🇭🇺 Magyar változat: [README.md](https://github.com/QwIT-Development/privacy-policy/blob/master/README.md)
 
 ## 0. Summary
-- Firka does not store any data on servers - all data remains only on your device.
+- Firka does not store any data on servers - all data is stored solely on your device.
 - The data comes from the KRÉTA system, which is the original data controller.
 - Firka only displays the data and does not have access to critical information such as your password.
 - When reporting bugs, YOU decide whether to share screenshots or logs - these are deleted after the issue is resolved.
 - If you want to modify or delete your data stored in KRÉTA, you can do so through your school or the KRÉTA customer service.
 
 ## 1. Introduction
-The Firka Napló (hereinafter: "application" or "Firka") aims to present student data retrieved from the KRÉTA system in a clear and organized way on the user's device.
+The Firka Napló (hereinafter: "application", "app" or "Firka") aims to present student data retrieved from the KRÉTA system in a clear and organized way on the user's device.
 
 ## 2. Data Controller Identification
-**Data Controller:** Firka Management Team (not a legal entity)  
+**Data Controller:** Firka Management Team, an unincorporated team (not a registered legal entity) 
 
 **Contact email:** legal+english@firka.app  
 
@@ -31,6 +31,14 @@ The application displays the following data obtained from the KRÉTA system and 
 
 These data are **not stored on Firka's servers**, only locally on the user's device.
 
+For us to be able to present news inside the app, it needs to access an Application Programming Interface (hereinafter: "API"), for which the system might log the following technical data:
+- the "User-Agent" specified by the client, which contains the current app version for every request sent through the app,
+- the request's initiator's IP address,
+- and other HTTP headers required for technical analysis (e.x. content type, locale settings).
+These data are not connected with user accounts or identifiable information, these are are logged only to ensure the proper functioning of the API and to maintain client security.
+
+**Important:** the app doesn't send the API any more information than needed, and the sent data is not and never will be forwarded to third parties.
+
 ## 4. Where your data is stored and its security
 - The application communicates with KRÉTA servers over an encrypted channel (HTTPS).
 - The retrieved data is stored only on the user's device and is **not transmitted to third parties** (except KRÉTA and related service providers for bug reporting purposes) for marketing or storage.
@@ -39,15 +47,18 @@ These data are **not stored on Firka's servers**, only locally on the user's dev
 Security measures: we apply encrypted communication, minimal access, and limited data retention during bug handling (see below).
 
 ## 5. Purposes of data processing and legal basis
-1. **Displaying KRÉTA data in the application** - purpose: main function of the app (performance of a contract with the user). **Legal basis:** performance of a contract (GDPR Article 6 (1) b)) or the explicit request of the user to use the application. *These data are stored temporarily only on the user's device, and neither the app developers nor third parties have access. The Firka Management Team (as the data controller) does not have access to these data in any form.*
+1. **Displaying KRÉTA data in the application** - purpose: main function of the app, based on performance of a contract with the user. **Legal basis:** performance of a contract (GDPR Article 6 (1) b)) or the explicit request of the user to use the application. *These data are stored temporarily only on the user's device, and neither the app developers nor third parties have access. The Firka Management Team (as the data controller) does not have access to these data in any form.*
 
 2. **Handling bug reports** - purpose: improving the operation of the application. **Legal basis:** the explicit consent of the user (GDPR Article 6 (1) a)), as users voluntarily share data (e.g., screenshots or logs) during bug reporting.
 
 3. **Handling necessary technical logs (ensuring regular operation)** - purpose: operational/logging reasons (short-term bug tracking). **Legal basis:** legitimate interest (GDPR Article 6 (1) f)), but only for minimal time and purpose-bound.
 
+4. **Online news provided by Firka** - purpose: making sure the API is functioning, fixing potential vulnerabilities, and announcing news that are deemed important by the developers of Firka. **Legal basis:** legitimate interest (GDPR Article 6 (1) f))
+
 ## 6. Data retention period
 - **Locally stored KRÉTA data:** remains on the device until the user deletes the application. Users can delete locally stored data at any time.
 - **Bug reports / logs (Discord / TestFlight):** bug reports are stored only for the duration of problem resolution and are deleted immediately after the issue is closed. (Upon user request, deletion can be carried out earlier.)
+- **Information received by the API:** the IP address of the requester and the API request's headers are stored for at most 90 days for the purpose of security, after which they are automatically deleted. If deemed important, this data might be kept for longer so that we can fulfill our legal obligations (e.x. in case of a security incident). If there are no security incidents, these logs are not seen or processed by anyone.
 
 ## 7. Data transfer to third parties and international transfers
 - **KRÉTA (Educational Development Zrt.):** the application retrieves data from KRÉTA systems - they are the original data controllers.
@@ -66,7 +77,7 @@ The data subject has the following rights:
 
 To exercise these rights, please send an email to **legal+english@firka.app**. We will respond within a reasonable time, but no later than 1 month; in complex cases, the response period may be extended by 2 months, with notification.
 
-**Important:** KRÉTA is responsible for the management and retention of data stored in its system. Firka only displays these data on the device and does not store them on its servers. Therefore, any modifications or deletions must be done via your school administrator's assistance or KRÉTA customer service.
+**Important:** the legal data controller for any data stored and managed on KRÉTA's systems is always the public education institution which the child attends. The Firka app is only displaying these data, and doesn't keep them on their servers. For this reason, if you want to modify or delete your data in KRÉTA, please consult the responsible person in your school (usually the administrator or school principal) 
 
 ## 9. Complaints and legal remedies
 If a data subject believes their rights have been violated, they may file a complaint with the supervisory authority:
